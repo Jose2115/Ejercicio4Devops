@@ -5,7 +5,7 @@
   <h1>Resultados del procesamiento</h1>
   <pre id="contenido">Cargando...</pre>
   <script>
-    fetch('http://TU_IP_EC2/resultado.txt')
+    fetch('http://54.144.105.194/resultado.txt')
       .then(r => r.text())
       .then(t => document.getElementById('contenido').textContent = t);
   </script>
