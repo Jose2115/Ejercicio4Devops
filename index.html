@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Resultados</title></head>
+<body>
+  <h1>Resultados del procesamiento</h1>
+  <pre id="contenido">Cargando...</pre>
+  <script>
+    fetch('http://TU_IP_EC2/resultado.txt')
+      .then(r => r.text())
+      .then(t => document.getElementById('contenido').textContent = t);
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+  build:
+    commands:
+      - echo "Iniciando procesamiento de datos..."
+      - python procesar.py
+  post_build:
+    commands:
+      - echo "Validando generación de resultados..."
+      - if [ -f resultado.txt ]; then echo "Validación exitosa"; else echo "Error: resultado.txt no encontrado" && exit 1; fi
+
+artifacts:
+  files:
+    - '**/*'
