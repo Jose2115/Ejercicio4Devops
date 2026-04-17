@@ -10,8 +10,8 @@ phases:
       - python procesar.py
   post_build:
     commands:
-      - echo "Validando generación de resultados..."
-      - if [ -f resultado.txt ]; then echo "Validación exitosa"; else echo "Error: resultado.txt no encontrado" && exit 1; fi
+      - echo "Validando generacion de resultados..."
+      - if [ -f resultado.txt ]; then echo "Validacion exitosa"; else echo "Error resultado.txt no encontrado" && exit 1; fi
 
 artifacts:
   files:
